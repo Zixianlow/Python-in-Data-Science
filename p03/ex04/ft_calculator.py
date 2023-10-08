@@ -11,12 +11,12 @@ class calculator:
         """vector calculator add operation doc"""
         V3 = []
         for i in range(0, len(V1)):
-            V3.append(V1[i] + V2[i])
+            V3.append(float(V1[i] + V2[i]))
         print("Add Vector is :", V3)
 
     def sous_vec(V1: list[float], V2: list[float]) -> None:
         """vector calculator subtract operation doc"""
         V3 = []
         for i in range(0, len(V1)):
-            V3.append(V1[i] - V2[i])
+            V3.append(float(V1[i] - V2[i]))
         print("Sous Vector is:", V3)

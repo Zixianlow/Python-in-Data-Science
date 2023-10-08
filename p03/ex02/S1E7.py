@@ -27,6 +27,7 @@ class Baratheon(Character):
 
 
 class Lannister(Character):
+    """Representing the Lannister family."""
     models = collections.defaultdict(list)
 
     def __init__(self, name: str, is_alive=True) -> None:
@@ -38,19 +39,19 @@ class Lannister(Character):
 
     def __repr__(self):
         """Baratheon class __repr__"""
-        return f"of Vector: \
+        return f"Vector: \
 ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
     def __str__(self):
         """Baratheon class __str__"""
-        return f"of Vector: \
+        return f"Vector: \
 ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
     def die(self):
         """Lannister abstract method doc"""
         self.is_alive = False
 
-    def create_lannister(self, name: str, is_alive=True):
+    @classmethod
+    def create_lannister(cls, name: str, is_alive=True):
         """Lannister creates Lannister"""
-        cls = Lannister(name, is_alive)
-        return cls
+        return cls(name, is_alive)

@@ -1,4 +1,4 @@
-def ft_median(numbers: list):
+def ft_median(numbers: list) -> int:
     """return median of list pased"""
     if (len(numbers) == 1):
         return numbers[0]
@@ -12,16 +12,18 @@ def ft_quartile(numbers: list, total) -> None:
     """prints [Q1, Q3] quartile of list pased"""
     print("quartile : [", end="")
     if (len(numbers) == 1):
-        print(f'{numbers[0]}, {numbers[0]}]')
+        print(f'{float(numbers[0])}, {float(numbers[0])}]')
         return
     if len(numbers) == 2:
-        print(f'{numbers[0]}, {numbers[1]}]')
+        print(f'{float(numbers[0])}, {float(numbers[1])}]')
         return
     i = len(numbers) // 2
     if (len(numbers) % 2):
-        print(f'{ft_median(numbers[:i + 1])}, {ft_median(numbers[i:])}]')
+        print(f'{float(ft_median(numbers[:i + 1]))}\
+, {float(ft_median(numbers[i:]))}]')
     else:
-        print(f'{ft_median(numbers[:i])}, {ft_median(numbers[i:])}]')
+        print(f'{float(ft_median(numbers[:i]))}\
+, {float(ft_median(numbers[i:]))}]')
 
 
 def ft_statistics(*args: int, **kwargs: str) -> None:

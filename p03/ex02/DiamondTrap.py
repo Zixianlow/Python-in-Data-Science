@@ -18,13 +18,17 @@ class King(Baratheon, Lannister):
     ('{self.family_name}', '{self.eyes}', '{self.hairs}')>"
 
     def set_eyes(self, eyes):
+        """King class set eyes"""
         self.eyes = eyes
 
     def get_eyes(self):
+        """King class get eyes"""
         return self.eyes
 
     def set_hairs(self, hairs):
+        """King class set hairs"""
         self.hairs = hairs
 
     def get_hairs(self):
+        """King class get hairs"""
         return self.hairs
